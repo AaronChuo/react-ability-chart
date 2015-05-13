@@ -1,0 +1,52 @@
+{
+  "name": "react-ability-chart",
+  "version": "0.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.js --content-base --progress --colors",
+    "build": "rm -rf ./dist && webpack --config webpack.config.production.js --progress && cp ./src/*.html ./dist",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AaronChuo/react-ability-chart.git"
+  },
+  "author": "Aaron Chuo",
+  "license": "MIT",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "d3": "^3.5.5",
+    "react": "^0.13.2",
+    "react-style": "^0.5.5"
+  },
+  "devDependencies": {
+    "autoprefixer-loader": "^1.2.0",
+    "babel-jest": "^5.0.1",
+    "css-loader": "^0.11.0",
+    "extract-text-webpack-plugin": "^0.7.0",
+    "file-loader": "^0.8.1",
+    "jest-cli": "^0.4.0",
+    "jsx-loader": "^0.13.1",
+    "jsxhint-loader": "^0.2.0",
+    "node-sass": "^2.1.1",
+    "react-hot-loader": "^1.2.5",
+    "sass-loader": "^0.6.0",
+    "style-loader": "^0.12.0",
+    "url-loader": "^0.5.5",
+    "webpack": "^1.8.9",
+    "webpack-dev-server": "^1.8.2"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react"
+    ],
+    "testPathDirs": [
+      "<rootDir>"
+    ]
+  }
+}
